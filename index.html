@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <!-- custom css file -->
+   <link rel="stylesheet" href="css/styles.css">
+   <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <!-- navbar -->
+   <nav class="elements">
+      <h2>Where in the world?</h2>
+      <span class="modeBtn" onclick="darkMode()"><ion-icon name="moon-outline"></ion-icon> Dark Mode</span>
+   </nav>
+
+   <!-- back to home -->
+   <a href="/">
+      <button class="homeBtn elements hide" type="button" ><ion-icon class="back-icon" name="arrow-back-outline"></ion-icon> Back</button>
+   </a>
+   
+   <!-- search feature -->
+   <div class="search-container elements">
+      <div class="search-icon">
+         <ion-icon id="icon" name="search" onclick="search()"></ion-icon>
+      </div>
+      
+      <input class="search" type="text" placeholder="Search for a country..." required>
+   </div>
+
+   <!-- display data -->
+   <div class="data-container"></div>
+
+   <!-- individual country display -->
+   <div class="country">
+      <div class="flag">
+         <img id="flag" src="#" alt="Country Flag">
+      </div>
+
+         <ul class="ul1">
+            <li>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Native Name: </span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Population: </span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Region: </span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Sub Region: </span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Capital: </span>
+               <span class="value"></span>
+            </li>
+         </ul>
+         
+         <ul class="ul2">
+            <li>
+               <span class="key">Top Level Domain:</span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Currencies:</span>
+               <span class="value"></span>
+            </li>
+            <li>
+               <span class="key">Languages:</span>
+               <span class="value"></span>
+            </li>
+         </ul>
+
+         <ul class="ul3">
+            <li>
+               <span class="key">Border Countries: </span>
+            </li>
+         </ul>
+   </div>  
+
+   <!-- JS files -->
+   <script src="js/fetchData.js"></script>
+   <script src="js/display.js"></script>
+   <script src="js/darkMode.js"></script>
+
+   <!-- ion-icons -->
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
