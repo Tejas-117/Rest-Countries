@@ -73,7 +73,7 @@ function displayData(data) {
    // displaying borders;
    const UL3 = document.querySelector('.ul3');
    x.borders.forEach(border => {
-      const listEle = `<li class="border">${border}</li>`
+      const listEle = `<li class="border elements">${border}</li>`
       UL3.insertAdjacentHTML('beforeend', listEle)
    })
 
